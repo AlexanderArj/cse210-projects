@@ -1,19 +1,20 @@
+using System;
+
 
 public class Comment 
 {
     public string _name;
-    public string _comment;
+    public string _commentText;
 
-    public Comment (string name, string comment)
+    public Comment(string name, string comment)
     {
         _name = name;
-        _comment = comment;
+        _commentText = comment;
     }
 
     public string DisplayComment()
     {
-        return _comment; 
-        
+        return _commentText; 
     }
-
+    
 }

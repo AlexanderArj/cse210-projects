@@ -1,56 +1,44 @@
+using System.Collections.Generic;
+
 public class Video 
 {
     public string _title;
     public string _author;
-    public double _lenght;
-    public List<Comment> _comments = new List<Comment>();
+    public double _length;
+    public List<Comment> Comments = new List<Comment>();
 
-    public int NumberOfComments()
-    {
-        int comments = 0;
-
-        foreach(Comment comment in _comments)
-        {
-            comments++;
-        }
-
-        return comments;
-
-    }
-
-    public Video(string title, string author, double lenght)
+    public Video(string title, string author, double length)
     {
         _title = title;
         _author = author;
-        _lenght = lenght;
+        _length = length;
     }
 
-    public string DisplayVideoInfo()
+    public int NumberOfComments()
     {
-        return $"{_title} - {_author} \n Lenght: {_lenght} seconds";
-
+        return Comments.Count;
     }
 
-    public double TimeInSeconds (int option)
+   public string DisplayVideoInfo()
+   {
+    return _title + " - " + _author + "\nLength: " + _length + " seconds";
+    
+    }
+
+
+    public double TimeInSeconds(int option)
     {
-
-        if (option == 1) // hours
+        if (option == 1) // horas
         {
-            return  (double)_lenght * (double)3600;
+            return _length * 3600;
         }
-
-        else if (option == 2) // minutes
+        else if (option == 2) // minutos
         {
-            return (double) _lenght * (double) 60;
-
+            return _length * 60;
         }
-
         else 
         {
-            return _lenght;
+            return _length; // segundos
         }
-        
     }
-
 }
-

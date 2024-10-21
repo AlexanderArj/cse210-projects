@@ -1,3 +1,5 @@
+using System;
+
 public class Product
 {
     private string _productName;
@@ -7,21 +9,23 @@ public class Product
 
     public Product(string name, int id, double price, int quantity)
     {
-       
+        _productName = name;
+        _productId = id;
+        _productPrice = price;
+        _productQuantity = quantity;
     }
 
     public double GetTotalCost()
     {
+        return _productPrice * _productQuantity;
     }
 
     public string GetName()
     {
+        return _productName;
     }
-    
-    public int GetId()
-    {
-        
+    public int GetId() {
+        return _productId;
     }
 
-    
 }
