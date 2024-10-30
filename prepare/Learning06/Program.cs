@@ -34,7 +34,7 @@ class Program
 
             double area = figura.GetArea();
 
-            Console.WriteLine($"The {color} shape has an area of {area}.");
+            Console.WriteLine($"The {color} shape has an area of {area}."); // 
         }
     }
 }

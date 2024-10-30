@@ -1,4 +1,4 @@
-
+// clase abstracta
 public abstract class Shape
 {
     private string _color;

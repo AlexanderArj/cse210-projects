@@ -9,6 +9,6 @@ public class Circle : Shape
 
     public override double GetArea()
     {
-        return _radio * _radio * Math.PI;
+        return _radio * _radio * Math.PI;// funcion para el numero pi
     }
 }
