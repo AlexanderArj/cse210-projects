@@ -25,6 +25,9 @@ class Program
         Circle figura6 = new Circle("Green", 6);
         figuras.Add(figura6);
 
+        Circle figura7 = new Circle("Color", 100);
+        figuras.Add(figura7);
+
         foreach (Shape figura in figuras)
         {
             string color = figura.GetColor();
